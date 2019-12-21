@@ -43,6 +43,7 @@ export class ApiService {
 
   post(endpoint, data): Promise<any> {
     const url = `${API_HOST}${endpoint}`;
+    console.log('url > ', url)
     return this.http.post<HttpEvent<any>>(url, data, this.httpOptions)
             .toPromise()
             .catch((e) => {

@@ -54,6 +54,6 @@ export class AuthService {
                 this.setTokenAndUser(res.token, res.user);
                 return res;
               })
-              .catch((e) => { throw e; });
+              .catch((e) => { console.log(e);throw e; });
   }
 }

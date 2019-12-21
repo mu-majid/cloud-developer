@@ -88,6 +88,7 @@ router.post('/login', async (req: Request, res: Response) => {
 
 //register a new user
 router.post('/', async (req: Request, res: Response) => {
+    console.log('here > ', req)
     const email = req.body.email;
     const plainTextPassword = req.body.password;
     // check email is valid
