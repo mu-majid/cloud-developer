@@ -6,7 +6,7 @@ export const config = {
     "host": "",
     "dialect": "postgres",
     "aws_reigion": "us-east-2",
-    "aws_profile": "default",
+    "AWS_PROFILE": "default",
     "aws_media_bucket": "udagram-ruttner-dev"
   },
   "prod": {

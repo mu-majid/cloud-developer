@@ -11,28 +11,28 @@ services:
   backend-user:
     image: mumajid/udacity-restapi-user
     environment:
-      POSTGRESS_USERNAME: $POSTGRESS_USERNAME
-      POSTGRESS_PASSWORD: $POSTGRESS_PASSWORD 
-      POSTGRESS_DB: $POSTGRESS_DB 
-      POSTGRESS_HOST: $POSTGRESS_HOST 
-      AWS_REGION: $AWS_REGION 
-      AWS_PROFILE: $AWS_PROFILE 
-      AWS_BUCKET: $AWS_BUCKET
-      JWT_SECRET: $JWT_SECRET
+      UDC_DB_UNAME: ${UDC_DB_UNAME}
+      UDC_DB_PASS: ${UDC_DB_PASS} 
+      UDC_DB: ${UDC_DB} 
+      UDC_DB_URL: ${UDC_DB_URL} 
+      AWS_REGION: ${AWS_REGION} 
+      AWS_PROFILE: ${AWS_PROFILE} 
+      AWS_MEDIA_BUCKET: ${AWS_MEDIA_BUCKET}
+      JWT_SECRET: ${JWT_SECRET}
       URL: "http://localhost:8100"
   backend-feed:
     image: mumajid/udacity-restapi-feed
     volumes:
       - $HOME/.aws:/root/.aws
     environment:
-      POSTGRESS_USERNAME: $POSTGRESS_USERNAME
-      POSTGRESS_PASSWORD: $POSTGRESS_PASSWORD 
-      POSTGRESS_DB: $POSTGRESS_DB 
-      POSTGRESS_HOST: $POSTGRESS_HOST 
-      AWS_REGION: $AWS_REGION 
-      AWS_PROFILE: $AWS_PROFILE 
-      AWS_BUCKET: $AWS_BUCKET
-      JWT_SECRET: $JWT_SECRET
+      UDC_DB_UNAME: ${UDC_DB_UNAME}
+      UDC_DB_PASS: ${UDC_DB_PASS} 
+      UDC_DB: ${UDC_DB} 
+      UDC_DB_URL: ${UDC_DB_URL} 
+      AWS_REGION: ${AWS_REGION} 
+      AWS_PROFILE: ${AWS_PROFILE} 
+      AWS_MEDIA_BUCKET: ${AWS_MEDIA_BUCKET}
+      JWT_SECRET: ${JWT_SECRET}
       URL: "http://localhost:8100"
   frontend:
     image: mumajid/udacity-frontend:local
